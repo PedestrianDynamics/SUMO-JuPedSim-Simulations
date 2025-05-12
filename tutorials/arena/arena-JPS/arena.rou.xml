@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2025-03-12 17:06:51 by Eclipse SUMO netedit Version v1_22_0+0794-7ec687faab8
+-->
+
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/routes_file.xsd">
+    <!-- VTypes -->
+    <vType id="pt_subway" vClass="tram" carFollowModel="Rail" length="66" personCapacity="280" boardingDuration="0.32" timeToTeleport="1800" timeToTeleportBidi="1800">
+        <param key="carriageLength" value="16.0"/>
+        <param key="locomotiveLength" value="16.0"/>
+    </vType>
+    <vType id="pt_pedestrian" vClass="pedestrian" width="0.3" desiredMaxSpeed="1.34" speedDev="0.08">
+        <!--<param key="has.fcd.device" value="true"/>-->
+        <param key="jupedsim.strengthGeometryRepulsion" value="35"/>
+        <param key="jupedsim.rangeGeometryRepulsion" value="0.019"/>
+    </vType>
+
+
+    <!-- Routes -->
+    <route id="pt_subway_subway" color="green" edges="143691386#5 143691386#6 143691388#0 143691388#1 130453352#1 182500853 1205616064#0 1205616064#1 130453349#0 130453349#1 130453349#2 130452740#0">
+        <stop trainStop="Arena" duration="95"/>
+    </route>
+
+    <!-- Flows -->
+    <vehicle id="subway.01" type="pt_subway" route="pt_subway_subway" depart="57800" line="subway"/>
+        <personFlow type="pt_pedestrian" id="subway_ped-01" color="blue" begin="triggered" number="205">
+            <ride from="143691386#5" trainStop="Arena" lines="subway.01"/>
+            <walk to="Gate_A">
+                <param key="rerouter" value="nearest"/>
+                <param key="pushParam" value="1"/>
+            </walk>
+        </personFlow>
+    <vehicle id="subway.02" type="pt_subway" route="pt_subway_subway" depart="57899" line="subway"/>
+        <personFlow type="pt_pedestrian" id="subway_ped-02" color="blue" begin="triggered" number="246">
+            <ride from="143691386#5" trainStop="Arena" lines="subway.02"/>
+            <walk to="Gate_A">
+                <param key="rerouter" value="nearest"/>
+                <param key="pushParam" value="1"/>
+            </walk>
+        </personFlow>
+    <vehicle id="subway.03" type="pt_subway" route="pt_subway_subway" depart="58009" line="subway"/>
+        <personFlow type="pt_pedestrian" id="subway_ped-03" color="blue" begin="triggered" number="225">
+            <ride from="143691386#5" trainStop="Arena" lines="subway.03"/>
+            <walk to="Gate_A">
+                <param key="rerouter" value="nearest"/>
+                <param key="pushParam" value="1"/>
+            </walk>
+        </personFlow>
+
+</routes>

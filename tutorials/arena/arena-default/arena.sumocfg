@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2025-05-10 19:15:22 by Eclipse SUMO sumo Version v1_23_1+0041-b74dc590c91
+-->
+
+<sumoConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">
+
+    <input>
+        <net-file value="arena.net.xml.gz"/>
+        <route-files value="arena.rou.xml"/>
+        <additional-files value="arena.poly.xml.gz,arena.stops.add.xml,arena.rerouter.add.xml"/>
+    </input>
+
+    <time>
+        <begin value="57600"/>
+        <end   value="60000"/>
+        <step-length value="0.5"/>
+    </time>
+
+    <processing>
+        <ignore-route-errors value="true"/>
+        <scale value="1.00"/>
+        <time-to-teleport value="30"/>
+        <tls.actuated.jam-threshold value="30"/>
+        <pedestrian.model value="striping"/>
+        <!--<pedestrian.model value="jupedsim"/>-->
+        <pedestrian.jupedsim.step-length value="0.02"/>
+    </processing>
+
+    <report>
+        <verbose value="true"/>
+        <duration-log.statistics value="true"/>
+        <no-step-log value="true"/>
+    </report>
+
+    <random_number>
+        <seed value="3608315"/>
+    </random_number>
+
+    <gui_only>
+        <gui-settings-file value="view.settings.xml"/>
+    </gui_only>
+
+</sumoConfiguration>
